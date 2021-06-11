@@ -6,7 +6,7 @@ const badReq = 400;
 const sucess = 200;
 const notFound = 404;
 const acessDenied = 403;
-const noContent = noContent;
+const noContent = 204;
 
 const createUser =  async (req, res) => {
   const {name, email, password} = req.body;
