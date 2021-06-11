@@ -1,17 +1,18 @@
 const jwt = require('jsonwebtoken');
 const segredo = 'seusecretdetoken';
+const notAuth = 401;
 
 module.exports = async (req, res, next) => {
-const token = req.headers.authorization
+  const token = req.headers.authorization;
 
-if(!token) return res.status(401).json({message:'missing auth token'})
+  if(!token) return res.status(notAuth).json({message:'missing auth token'});
 
 
-try {
+  try {
     const decoded = jwt.verify(token, segredo);
     if (!decoded) {
       return res
-        .status(401)
+        .status(notA)
         .json({ message: 'jwt malformed' });
     }
 
@@ -20,7 +21,7 @@ try {
 
     next();
   } catch (err) {
-    return res.status(401).json({ message: err.message });
+    return res.status(notA).json({ message: err.message });
   }
 };
 
