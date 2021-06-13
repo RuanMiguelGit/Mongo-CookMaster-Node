@@ -29,15 +29,15 @@ app.get('/', (request, response) => {
 });
 
 app.post('/users', defineUser.createUser );
-// app.post('/login', defineUser.login );
-// app.get('/recipes',  defineUser.recipesAll );
-// app.get('/recipes/:id',  defineUser.recipesEspc );
-// app.put('/recipes/:id',ValidateJwt, defineUser.updateRecipe);
-// app.delete('/recipes/:id',ValidateJwt, defineUser.deleteRecipe);
-// app.post('/recipes', ValidateJwt, defineUser.recipes );
-// app.put('/recipes/:id/image/', ValidateJwt,  upload.single('image'), defineUser.uploads);
-// app.post('/users/admin',  ValidateJwt, defineUser.admin);
-// app.get('/images',);
+app.post('/login', defineUser.login );
+app.get('/recipes',  defineUser.recipesAll );
+app.get('/recipes/:id',  defineUser.recipesEspc );
+app.put('/recipes/:id',ValidateJwt, defineUser.updateRecipe);
+app.delete('/recipes/:id',ValidateJwt, defineUser.deleteRecipe);
+app.post('/recipes', ValidateJwt, defineUser.recipes );
+app.put('/recipes/:id/image/', ValidateJwt,  upload.single('image'), defineUser.uploads);
+app.post('/users/admin',  ValidateJwt, defineUser.admin);
+app.get('/images',);
 app.use(express.static('./public'));
 
 
