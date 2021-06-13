@@ -12,7 +12,7 @@ module.exports = async (req, res, next) => {
     const decoded = jwt.verify(token, segredo);
     if (!decoded) {
       return res
-        .status(notA)
+        .status(notAuth)
         .json({ message: 'jwt malformed' });
     }
 
@@ -21,7 +21,7 @@ module.exports = async (req, res, next) => {
 
     next();
   } catch (err) {
-    return res.status(notA).json({ message: err.message });
+    return res.status(notAuth).json({ message: err.message });
   }
 };
 
