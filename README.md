@@ -29,6 +29,7 @@ Consultar arquivos do servidor através de uma api REST.
 <ul>
   <li> Git Clone no Projeto</li>
   <li> Npm Install</li>
+ <li> Inicie o MongoDB</li>
   <li> Npm start</li>
  </ul>
 
