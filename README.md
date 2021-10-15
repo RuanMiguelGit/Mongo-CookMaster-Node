@@ -45,11 +45,8 @@
 
 
 # Como Rodar o projeto
-<ol>
   <ul>
   <li> Git Clone no Projeto</li>
   <li> Npm Install</li>
-   <li> Adicionar os seguintes dados dentro do arquivo .env</li>
-     <li> Npm start</li>
+  <li> Npm start</li>
  </ul>
- </ol>
